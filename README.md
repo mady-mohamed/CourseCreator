@@ -1,6 +1,6 @@
 # AI Course Creator
 
-This project is an AI-powered tool for generating course materials such as readings, assignments, case studies, and practice project prompts based on chapter summaries from a `.docx` file. use with Book Summarizer https://github.com/mady-mohamed/BookSummarizer
+This project is an AI-powered tool for generating course materials such as readings, assignments, case studies, and practice project prompts based on chapter summaries from a `.docx` file. use with [Book Summarizer](https://github.com/mady-mohamed/CourseCreator)
 
 ## Features
 
