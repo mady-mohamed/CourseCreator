@@ -78,7 +78,6 @@ def split_content(content, max_length = 6000):
     ]
 
 def parse_with_genai(summary_chunks, api_key, section):
-    genai.configure(api_key=api_key)
     model = genai.GenerativeModel("gemini-1.5-flash")
     if section == "readings":
         template = template_readings

@@ -1,10 +1,13 @@
 import streamlit as st
 from parse import split_content, parse_with_genai
 from chapter import split_into_chapters, display_chapter
-import docx
+import docx, os
+import google.generativeai as genai
 st.title("AI Course Creator")
 
-api_key = st.text_input("Enter API Key for Gemini")
+api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=api_key)
+
 uploaded_file = st.file_uploader("Choose a .docx file", type="docx")
 
 if uploaded_file is not None:
