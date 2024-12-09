@@ -13,7 +13,6 @@ This project is an AI-powered tool for generating course materials such as readi
 - Python 3.x
 - `streamlit`
 - `python-docx`
-- `google-generativeai`
 - `ollama`
 
 ## Installation
