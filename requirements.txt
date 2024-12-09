@@ -1,4 +1,3 @@
 python-docx
 ollama
 streamlit
-google-generativeai

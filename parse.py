@@ -2,9 +2,6 @@ import google.generativeai as genai
 from rich.console import Console
 from tornado import template
 
-genai.configure(api_key="AIzaSyCQpB9fhuh7egpKettu31cEqlP5SDiIAAw")
-model = genai.GenerativeModel("gemini-1.5-flash")
-
 template_readings = ('''
     "Based on the following chapter summary, create detailed reading material for a course:
 
@@ -80,7 +77,9 @@ def split_content(content, max_length = 6000):
         content[i:i + max_length] for i in range(0, len(content), max_length)
     ]
 
-def parse_with_genai(summary_chunks, section):
+def parse_with_genai(summary_chunks, api_key, section):
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel("gemini-1.5-flash")
     if section == "readings":
         template = template_readings
     elif section == 'case-study':
